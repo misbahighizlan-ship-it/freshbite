@@ -1,31 +1,39 @@
-<script>
-const formulaire = document.getElementById("contactForm");
+
+const contactForm = document.getElementById("contactForm");
 const formMessage = document.getElementById("formMessage");
 
-form.addEventListener("submit", function(e){
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault(); 
+
+    formMessage.textContent = "";
 
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    if(name === "" || email === "" || message === ""){
-        formMessage.textContent = "Tous les champs sont obligatoires !";
-        formMessage.style.color = "red";
-        return;
+    if (name === "" || email === "" || message === "") {
+      formMessage.textContent = "⚠️ Tous les champs sont obligatoires !";
+      formMessage.style.color = "red";
+      return;
     }
 
     
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if(!emailRegex.test(email)){
-        formMessage.textContent = "Adresse email non valide !";
-        formMessage.style.color = "red";
-        return;
+    if (!emailRegex.test(email)) {
+      formMessage.textContent = "❌ Adresse email non valide !";
+      formMessage.style.color = "red";
+      return;
     }
 
-    formMessage.textContent = "Message envoyé avec succès !";
+    
+    formMessage.textContent = "✅ Message envoyé avec succès !";
     formMessage.style.color = "green";
 
-    formulaire.reset(); 
-});
-</script>
+    contactForm.reset(); 
+
+    setTimeout(() => {
+      formMessage.textContent = "";
+    }, 4000);
+  });
+}
