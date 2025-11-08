@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <h1> FreshBite </h1>
+            <img src="logo.jpg" alt="logo">
+
+        </div>
+        <ul class="links">
+            <li><a href="aceuil">Aceuil</a></li>
+            <li><a href="#menu">Menu</a> <br></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#galerie">Galerie</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="heros">
+        <div class="hero">
+            <h2>Des plats sains, un esprit léger</h2>
+            <p> Chez FreshBite, nous croyons qu’une alimentation saine peut aussi être savoureuse.<br>Découvrez des
+                plats équilibrés, frais et pleins de vitalité, préparés chaque jour avec des ingrédients naturels.</p>
+        </div>
+        <a href="#menu" class="btn1">Voir le menu</a>
+        <!--<button id="bu1">Voir le Menu</button>-->
+    </section>
+    <section class="menujour" id="menu">
+        <div id="descriptionmenu">
+            <h1>Nos plats </h1>
+            <p>Nous vous proposons quelque recettes pour répondre à vos aspirations <br>pour mieux manger au quotidien.
+            </p>
+
+            <hr height="250px" width="390">
+        </div>
+        <div class="platm">
+            <div class="img1">
+                <img src="assiete5.jpg" alt="assiete5">
+                <p> Soupe de Lentilles Corail ........ < 600 kcal</p>
+                        <p>120 DH</p>
+            </div>
+
+            <div class="img2">
+                <img src="recette3.png" alt="recette3">
+                <p> Crumble de Légumes <br>......< 600 kcal </p>
+                        <p>150 DH</p>
+            </div>
+            <div class="img3">
+                <img src="recette4.jpg" alt="recette4">
+                <p> Linguine all’Arrabbiata et Burrata <br>....500kcal </p>
+                <p>120 DH</p>
+            </div>
+            <div class="img4">
+                <img src="cratein.jpeg" alt="cratein">
+                <p> Gratin de Légumes <br> Noisettes et Salade d'Endives <br>...< 600kcal </p>
+                        <p>140 DH</p>
+            </div>
+        </div>
+
+        <a href="#contact" class="btn1">Contactez-nous</a>
+
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contactez-nous</h2>
+            <form id="contactForm">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="btn1">Envoyer</button>
+            </form>
+            <div id="formMessage"></div>
+
+            <!-- Google mps-->
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="400" height="300" style="border:0;"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <!--partie galerie-->
+    <section id="galerie" class="galerie">
+        <div id="gal">
+        <h2>Galerie</h2>
+        <p>Découvrez notre restaurant et nos plats délicieux !</p>
+</div>
+        <div class="galerie-container">
+            <div class="galerie-item">
+                <img src="healty.jpg" alt="healty">
+            </div>
+            <div class="galerie-item">
+                <img src="dessert1.jpg" alt="dessert">
+            </div>
+            <div class="galerie-item">
+                <img src="jus.jpg" alt="jus">
+            </div>
+            <div class="galerie-item">
+                <img src="chef.jpg" alt="chef">
+            </div>
+            <div class="galerie-item">
+                <img src="restearnt2.jpg" alt="Restaurant ">
+            </div>
+            <div class="galerie-item">
+                <img src="resterant.jpg" alt="Restaurant 2">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.jpg" alt="FreshBite Logo">
+                <h3>FreshBite</h3>
+                <p>Mange sain, vis bien 🌿</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Liens rapides</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#galerie">Galerie</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>📍 Casablanca, Maroc</p>
+                <p>📞 +212 6 12 34 56 78</p>
+                <p>✉️ contact@freshbite.ma</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 FreshBite — Tous droits réservés.</p>
+        </div>
+    </footer>
+
+
+    <!--<iframe
+  src="https://www.google.com/maps/embed?pb=..."
+  width="400"
+  height="300"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>-->
+
+
+
+</body>
+
+</html>

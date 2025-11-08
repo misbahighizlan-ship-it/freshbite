@@ -1,0 +1,457 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*Comportement :
+Les éléments sont alignés sur une seule ligne.
+Il n'y a pas d'espace avant le premier élément ni après le dernier.
+L'espace restant est réparti uniformément entre les éléments.*/
+    padding: 15px 60px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar h2 {
+    color: rgb(74, 173, 190);
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(9, 35, 150);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+.links a:hover {
+    color: pink;
+}
+
+/*responsive herosection */
+@media (max-width: 768px) {
+    .heros {
+        justify-content: center;
+        text-align: center;
+    }
+    .hero {
+        width: 90%;
+        margin: 0;
+        padding: 20px;
+    }
+    .hero h2 {
+        font-size: 24px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+.heros {
+    display: flex;
+    /* text1 |text2*/
+    justify-content: flex-end;
+    /* pour que le text en droite*/
+
+    align-items: center;
+    /*organiser pour être perbond*/
+    background-image: url('assiette.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(75, 134, 189, 0.6);
+    /*sert à ajouter une ombre légére*/
+    /*padding-left: 80px;*/
+}
+
+.hero {
+    width: 40%;
+    padding: 25px;
+    background-color: rgba(49, 158, 221, 0.5);
+    /*background color de heros*/
+    border-radius: 15px;
+    margin-right: 80px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: rgb(172, 90, 104);
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*flex-direction: column;*/
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin:10px 50px ;
+    background-color: rgb(5, 27, 97);
+    border-radius: 20px;
+    color: white;
+     text-decoration: none;
+    font-size: 16px;
+    cursor: pointer; /* ktbdl chkl  filech --> main    : le curseur se transform en main*/
+    transition: background 0.3s ease;
+    /* 3s de bleu vers color de hover*/
+}
+
+.btn1:hover {
+    background-color: pink;
+}
+/* pour scroll facilement*/
+html {
+    scroll-behavior: smooth;
+}
+/*responsive  menu*/
+@media (max-width: 768px) {
+    .platm {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
+    }
+    .img1 img, .img2 img, .img3 img, .img4 img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+
+.menujour{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px ;
+    min-height: 100vh;
+   background-color: rgb(34, 163, 185);
+ color:white
+}
+
+#descriptionmenu{
+    
+    text-align: center;
+    margin-bottom: 30px;
+    color:rgb(228, 57, 85);
+}
+
+.platm{
+    display:grid ;
+    grid-template-columns: repeat(2, 1fr); /* 2 photo  en colonne*/
+    gap: 30px; /* l'espace entre pho*/
+    width: 80%;
+    max-width: 800px;
+}
+
+.platm div {
+  text-align: center;
+  background-color: #dbbaba;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s ease;/* Elle permet de modifier l'apparence d'un élément*/
+  color:rgb(228, 57, 85);
+}
+.platm img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.menujour p{
+    
+    font-size: 20px;
+}
+.img1 img{
+   width: 300px;
+   height: 200px;
+}
+
+.img2 img{
+   width: 300px;
+   height: 200px;
+}
+
+.img3 img{
+   width: 300px;
+   height: 200px;
+}
+
+.img4 img{
+   width: 300px;
+   height: 200px;
+}
+
+/*partie pagemenu*/
+.pagemenu {
+   /* background-color: rgb(240, 209, 189);*/
+    /*background: linear-gradient(to right, #dbeafe, #bfdbfe,pink);*/
+    background-image: url('menupage.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    color: rgb(2, 2, 85);
+    text-align: center;      
+    font-family: 'Poppins', sans-serif;
+    padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05)
+}
+
+.pagemenu h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(2, 2, 85);
+    text-shadow: 1px 1px 3px rgba(2, 38, 71, 0.4);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.pagemenu p {
+    font-size: 18px;
+    color: rgb(5, 5, 117);
+    text-align: center;
+    width: 70%;               
+    margin: 0 auto;           
+    line-height: 1.6;          
+}
+
+/*.pagem{
+    text-align: center;
+    color: rgb(1, 1, 15);
+}*/
+.pagemenu img{
+    width: 200px;
+    height: 200px;
+}
+
+   /*partie contact*/
+.contact {
+    padding: 80px 20px;
+    background-color: rgb(245, 245, 245);
+    color: rgb(86, 135, 190);
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+.contact button.btn1 {
+    width: 150px;
+    align-self: center;
+     
+}
+
+
+/*galerie*/
+
+#gal{
+  text-align: center;
+  color:pink;
+  font-size: large;
+}
+.galerie-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galerie-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galerie-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/*responsive footer*/
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+.footer {
+  background-color: rgb(34, 163, 185);
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+  gap: 30px;
+}
+
+.footer-logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.footer-links h4, 
+.footer-contact h4 {
+  margin-bottom: 10px;
+  color: #f8f8f8;
+  text-decoration: underline;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: pink;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  padding-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .galerie-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .links li a {
+        font-size: 16px;
+    }
+
+    
+    /* Menu Jour */
+    .platm {
+        grid-template-columns: 1fr;
+        width: 95%;
+        gap: 20px;
+    }
+    .img1 img, .img2 img, .img3 img, .img4 img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Page Menu background */
+    .pagemenu {
+        background-attachment: scroll;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .heros {
+        height: 80vh;
+    }
+    .hero h2 {
+        font-size: 20px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .footer {
+        font-size: 14px;
+    }
+    .btn1 {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
